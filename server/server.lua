@@ -1,4 +1,4 @@
-local SMDXCore = exports['smdx-core']:GetCoreObject()
+local SMDXCore = exports['smdx-core']:GetSMDX()
 
 -----------------------------------------------------------------------
 -- version checker
@@ -10,7 +10,7 @@ local function versionCheckPrint(_type, log)
 end
 
 local function CheckVersion()
-    PerformHttpRequest('https://raw.githubusercontent.com/Rexshack-RedM/rsg-spawn/main/version.txt', function(err, text, headers)
+    PerformHttpRequest('https://raw.githubusercontent.com/SMDX-RedM-Framework/smdx-spawn/main/version.txt', function(err, text, headers)
         local currentVersion = GetResourceMetadata(GetCurrentResourceName(), 'version')
 
         if not text then 
